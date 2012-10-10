@@ -1,5 +1,5 @@
 
-jQuery(document).ready(function($) {
+jQuery(function($) {
 
 	$(window).scroll(function(){
 		if($(this).scrollTop()>480){
