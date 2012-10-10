@@ -38,12 +38,15 @@ body {
   padding: 50px 0;
 }
 header {
-  text-align: center;
-  height: 420px;
+  height: 300px;
   max-width: 810px;
   margin: 0 auto;
   padding: 0px 40px;
   position: relative;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
 }
 #contenidos article {
   background: url("../imagenes/separador.png") bottom center no-repeat;
@@ -51,18 +54,21 @@ header {
   margin: 30px auto 0;
   padding: 0px 40px 90px;
 }
-#contenidos article#reserva_ {
+#contenidos article p {
+  text-indent: 15px;
+}
+#contenidos article#funciones {
   background-image: none;
   padding-bottom: 0px;
   text-shadow: none;
 }
-#contenidos article#reserva_ h3 {
+#contenidos article#funciones h3 {
   text-align: center;
   font-size: 30px;
   margin-bottom: 0;
   text-shadow: 1px 1px rgba(0,0,0,0.7);
 }
-#contenidos article#reserva_ table {
+#contenidos article#funciones table {
   margin-bottom: 30px;
 }
 #contenidos h1,
@@ -95,7 +101,7 @@ nav {
   box-shadow: 0 0 40px 5px rgba(50,0,0,0.4);
   width: 100%;
   position: absolute;
-  top: 385px;
+  top: 250px;
   left: 0;
   z-index: 100;
   padding: 20px 0;

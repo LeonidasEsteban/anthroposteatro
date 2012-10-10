@@ -22,12 +22,12 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 jQuery(document).ready(function($) {
 
 	// initiate page scroller plugin
-	$('body').pageScroller({
+	/*$('body').pageScroller({
 		navigation: 'nav',
 		scrollOffset: -130,
 		animationSpeed: 1000
 
-	});
+	});*/
 
 
 	$(window).scroll(function(){
