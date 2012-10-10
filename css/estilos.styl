@@ -1,0 +1,333 @@
+
+/* VARIABLES */
+
+color1 = #e53433
+
+fuente1 = helvetica, arial, sans-serif
+fuente2 = 'Pacifico', cursive
+
+/* Coming Soon y Handlee son las google fonts geniales para este sitio */
+
+tnormal = all .2s ease-in-out
+
+
+radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	border-radius arguments
+
+transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	transition arguments
+
+transform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	transform arguments
+
+transform-origin()
+	-webkit-transform-origin arguments
+	-moz-transform-origin arguments
+	transform-origin arguments	
+
+animation()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-ms-animation arguments
+	-o-animation arguments
+	animation arguments
+
+
+
+/* Animaciones */
+
+@keyframes fadein
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+@keyframes fadeout
+	0%
+		transform translateY(0)
+		opacity 1
+	100%
+		transform translateY(40px)
+		opacity 0
+
+
+
+
+
+/* ESTILOS GENERALES */
+
+*
+	padding 0
+	margin 0
+	border 0
+
+body, input, select, textarea
+	font-family fuente1
+	font-size 15px
+	text-shadow 1px 1px rgba(0, 0, 0, 0.4)
+	line-height 24px
+	color black
+
+h1, h2, h3, nav
+	font-family fuente2
+	font-weight normal
+
+::selection
+	color white
+	background-color darken(color1,40%)
+
+body
+	background url(../imagenes/fondo.jpg) 50% -194px repeat-x fixed color1
+	color white
+
+
+
+/* ESTILOS PARTICULARES */
+
+
+#sombra
+	box-shadow 0 0 600px 60px #300 inset
+	padding 50px 0
+	//background url(../imagenes/blood.png) right 32px no-repeat fixed
+
+header
+	text-align center
+	height 420px
+	max-width 810px
+	margin 0 auto
+	padding 0px 40px
+	position relative
+
+h1
+	//display none
+
+
+#contenidos
+	article
+		background url(../imagenes/separador.png) bottom center no-repeat
+		max-width 810px
+		margin 30px auto 0
+		padding 0px 40px 90px
+		&#reserva_
+			background-image none
+			padding-bottom 0px
+			text-shadow none
+
+			h3 
+				text-align center
+				font-size 30px
+				margin-bottom 0
+				text-shadow 1px 1px rgba(0, 0, 0, .7)
+
+			table
+				margin-bottom 30px
+
+	h1, h2, h3, h4
+		margin-bottom 20px
+
+	h2
+		font-size 50px
+		line-height 40px
+		font-weight 400
+		text-shadow -3px 3px 5px rgba(0,0,0,.5)
+
+	p, ul, ol, table
+		margin-bottom 15px
+
+	ul, ol
+		margin-left 30px
+
+	a
+		color white
+
+
+nav
+	background url(../imagenes/bg.png)
+	box-shadow 0 0 40px 5px rgba(50,0,0,.4)
+	width 100%
+	position absolute
+	top 385px
+	left 0
+	z-index 100
+	padding 20px 0
+	font-size 25px
+	line-height 20px
+
+	&.fixed
+		position fixed
+		top 0
+	ul
+		text-align center
+		li
+			display inline
+			a
+				color white
+				padding 10px 15px 5px
+				text-decoration none
+				display inline-block
+				border-bottom 2px solid transparent
+				transition tnormal
+				&:hover
+						border-color white
+			&.active
+				a
+					//border-color rgba(255,100,100,.7)
+					border-color white
+
+
+
+
+
+
+.float-right
+	float right
+	padding-left 20px
+	padding-top 5px
+
+.float-left
+	float left
+	padding-right 20px
+	padding-top 5px
+
+.imagen
+	img
+		display block
+		border 5px solid white
+		box-shadow 0 0 20px #300
+
+#imgmapa
+	radius 350px
+	display inline-block
+	margin 0 0 0 auto
+	border 5px solid white
+	box-shadow 0 0 20px #300
+	background-color white
+	img
+		display block
+		radius 350px
+
+#map_canvas
+	border 5px solid white
+	box-shadow 0 0 50px #300
+	radius 10px
+	overflow hidden
+	position relative
+	height 300px
+	width 640px
+
+
+
+
+.clear
+	clear both
+
+
+
+table
+	border-collapse collapse
+	width 100%
+	th
+		padding 5px
+		font-family fuente2
+		font-weight normal
+		font-size 20px
+		text-shadow 1px 1px rgba(0, 0, 0, .5)
+	td
+		border 1px solid #600
+		padding 20px 10px
+		font-size 35px
+		line-height 30px
+		text-align center
+		font-family fuente2
+		&.evento
+			background-color white
+			color color1
+		strong
+			font-size 14px
+			line-height 14px
+			font-family fuente1
+			font-weight normal
+			display block
+
+#fecha
+	font-family fuente2
+	position absolute
+	top 210px
+	left 320px
+	font-size 23px
+	text-align left
+	text-shadow -5px 5px 5px rgba(0,0,0,.5)
+	span
+		font-size 60px
+		position absolute
+		left -38px
+		top 15px
+	strong
+		display block
+		font-size 16px
+
+
+#cita
+	display none
+	font-family fuente2
+	position absolute
+	top 20px
+	right 20px
+	text-align left
+
+
+
+.info 
+	font-size 14px
+	line-height 20px
+
+
+td 
+	position relative
+	small
+		font-size 12px
+		font-family fuente1
+		display block
+		position absolute
+		text-align  center
+		left 0
+		right 0
+		top 5px
+
+
+@media screen and (max-width:800px) 
+	#contenidos article, header
+		max-width auto
+
+	.float-right, .float-left
+		float none !important
+		padding-left 0
+		padding-right 0
+
+
+	img
+		width 100%
+
+	#map_canvas
+		width auto
+		height auto
+
+		img 
+			display block
+
+	header
+		height auto
+	nav 
+		position static !important
+		ul li 
+			display block
+
+
+	#sombra
+		box-shadow none
